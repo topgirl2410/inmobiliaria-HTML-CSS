@@ -1,24 +1,17 @@
-/** Custom Properties **/
-
 :root {
-    --blanco: #fff;
+    --blanco: #FFF;
     --negro: #111111;
-    --gris: #343a40;
+    --gris: #343A40;
 
     --fuentePrincipal: 'Raleway', sans-serif;
 }
 
-
-/** Globales **/
 html {
     font-size: 62.5%;
-    /** 1rem = 10px **/
     box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
+*, *:before, *:after {
     box-sizing: inherit;
 }
 
@@ -28,13 +21,11 @@ body {
     line-height: 1.8;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-weight: 900;
+    line-height: 1.2;
     margin: 1rem 0 4rem 0;
 }
-
 
 h1 {
     font-size: 4.8rem;
@@ -71,19 +62,59 @@ img {
     transition: background-color .3s;
 }
 
-btn:hover {
+.btn:hover {
     background-color: var(--gris);
     color: var(--blanco);
 }
 
-
 /** Utilidades **/
-
 .text-center {
     text-align: center;
 }
 
-
-mt-5 {
+.mt-5 {
     margin-top: 5rem;
 }
+
+/** Header */
+.header {
+    min-height: 60rem;
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+}
+
+.contenido-header {
+    display: flex;
+    flex-direction: column;
+    height: calc(60rem - 4rem);
+    justify-content: space-between;
+    color: var(--blanco);
+}
+
+.nombre-sitio {
+    font-weight: 300;
+    text-align: center;
+    font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+    .nombre-sitio {
+        font-size: 5rem;
+    }
+}
+
+.nombre-sitio span {
+    font-weight: 900;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
